@@ -348,17 +348,15 @@ margin-top: 0;
     }
 }
 
-
 .blog-section {
     text-align: center;
     padding: 50px 20px;
-    /* background:#040823; */
 }
 
 .blog-heading {
     font-size: 32px;
     font-weight: bold;
-    color:white;
+    color: white;
     margin-bottom: 20px;
 }
 
@@ -374,55 +372,72 @@ margin-top: 0;
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    width: 320px; /* Slightly increased width */
+    min-height: 420px; /* Increased height */
     text-align: left;
     padding-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .blog-card img {
     width: 100%;
-    height: 180px;
+    height: 200px; /* Increased image height */
     object-fit: cover;
 }
 
 .blog-card h3 {
-    font-size: 20px;
-    color:  #040823;
+    font-size: 22px;
+    color: #040823;
     margin: 15px;
 }
 
 .blog-card p {
     font-size: 14px;
-    color:#040823;
+    color: #040823;
     margin: 0 15px;
 }
 
+/* Location styling */
+.location {
+    font-size: 16px;
+    color: #040823;
+    margin: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.location i {
+    color:#040823;
+    margin-right: 8px;
+    font-size: 18px;
+}
+
 .read-more {
-    display: block; /* Makes it take full width */
-    width: fit-content; /* Only takes the necessary width */
-    margin: 15px auto; /* Centers it horizontally */
-    padding: 10px 20px; /* Proper padding */
-    color: #040823; /* Button text color */
+    display: block;
+    width: fit-content;
+    margin: 15px auto;
+    padding: 10px 20px;
+    color: #040823;
     font-weight: bold;
     text-decoration: none;
     border: 2px solid #040823;
-    border-radius: 5px; /* Adds rounded corners */
-    transition: 0.3s ease-in-out; /* Smooth hover effect */
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
 }
 
 .read-more:hover {
-    background: #040823; /* Changes background on hover */
-    color: white; /* Changes text color on hover */
-    text-decoration: none; /* Prevents underline */
+    background: #040823;
+    color: white;
 }
-
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    
-.blog-section{
-    margin-top: -200px;
-}
+    .blog-section {
+        margin-top: -150px; /* Adjusted for better spacing */
+    }
+
     .blog-container {
         flex-direction: column;
         align-items: center;
@@ -430,21 +445,26 @@ margin-top: 0;
 
     .blog-card {
         width: 90%;
-    }
-}
-
-@media (min-width: 1024px) { /* Adjust for large screens */
-    .blog-card {
-        width: 400px; /* Increase width */
-        height: 350px; /* Increase height */
+        min-height: 450px; /* Increased height for mobile */
     }
 
     .blog-card img {
-        height: 220px; /* Increase image height */
+        height: 220px; /* Adjusted for mobile */
+    }
+}
+
+@media (min-width: 1024px) {
+    .blog-card {
+        width: 400px;
+        min-height: 480px; /* Increased height */
+    }
+
+    .blog-card img {
+        height: 230px;
     }
 
     .blog-card h3 {
-        font-size: 22px; /* Slightly larger text */
+        font-size: 24px;
     }
 
     .blog-card p {
@@ -668,22 +688,26 @@ i {
         
         </main>
         <!-- !-- Blog Section  -->
-    <section class="blog-section">
-        <h2 class="blog-heading">Latest Event</h2>
-        <div class="blog-container">
-            <!-- Blog 1 -->
-            <div class="blog-card">
-                <img src="assets/images/WhatsApp Image 2025-02-05 at 15.57.39_28c451e5.jpg" alt="Blog Image 1">
-                <h3>Majlis e -Ramadan</h3>
-                <p>Mangalore's Biggest Food Festival</p>
-
-                <a href="index2.html" class="read-more">Explore Now</a>
+        <section class="blog-section">
+            <h2 class="blog-heading">Latest Event</h2>
+            <div class="blog-container">
+                <!-- Blog 1 -->
+                <div class="blog-card">
+                    <img src="assets/images/WhatsApp Image 2025-02-05 at 15.57.39_28c451e5.jpg" alt="Blog Image 1">
+                    <h3>Majlis e -Ramadan</h3>
+                    <p>Mangalore's Biggest Fashion & Food Festival</p>
+                    <p>Starting From March 9 - April 9 2025</p>
+        
+                    <!-- Location -->
+                    <p class="location">
+                        <i class="fas fa-map-marker-alt"></i> Keianza Garden, Uchila, Mangalore.
+                    </p>
+        
+                    <a href="index2.html" class="read-more">Explore Now</a>
+                </div>
             </div>
-            </div>
-            </section>
-    
-        </div>
-    </section>
+        </section>
+        
     <section class="contact-section">
         <h2 style="text-align: center;">Connect Us</h2>
         <form class="contact-form" onsubmit="sendWhatsAppMessage(event)">
