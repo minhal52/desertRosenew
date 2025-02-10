@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Rose </title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+</head>
+<style>
+    :root {
+    --first: #040823;
+    --second: #e2bd55;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--first);
+    color: white;
+}
+
+header {
+    background-color: var(--first);
+    padding: 15px;
+    color: var(--second);
+    font-size: 24px;
+}
+
+.event-details {
+    max-width: 900px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+.event-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-image {
+    width: 50%;
+    border-radius: 10px;
+}
+
+.event-content {
+    width: 50%;
+    text-align: left;
+}
+
+.back-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 15px;
+    background-color: #f8b400;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Responsive for mobile screens */
+@media (max-width: 768px) {
+    .event-container {
+        flex-direction: column;
+        text-align: center;
+    }
+ h1{
+    font-size: 24px;
+}
+    .event-image,
+    .event-content {
+        width: 100%;
+        margin-top: -28px;
+    }
+
+    .event-content {
+        text-align: center;
+    }
+}
+.event-content i {
+    color: var(--second);
+    margin-right: 8px;
+}
+
+.gallery {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 24px;
+    color: var(--second);
+    margin-bottom: 20px;
+}
+
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+}
+
+.gallery-container img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-container img:hover {
+    transform: scale(1.05);
+}
+
+/* Responsive for small screens */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================counting numbers==================== */
+
+.container2 {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.counter-numbers {
+    color: #fff;
+    margin: 0; /* Reset margin */
+    font-size: 40px;
+    text-align: center;
+}
+
+.container2 p {
+    margin-top: 5px; /* Adjust the margin-top value */
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    color: #fff;
+}
+
+.contact-num{
+    margin-top: 10px;
+    font-size: 14px;
+}
+.contact-num a{
+text-decoration: none;
+color:#e2bd55;
+}
+
+
+.footer {
+    background: #040823;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* About Us Section (Left Side) */
+.footer-about {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-about h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.footer-about p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Contact Details (Right Side) */
+.footer-contact {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-about, .footer-contact {
+        text-align: center;
+    }
+    
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-about {
+        text-align: center;
+    }
+
+    .footer-contact {
+        text-align: center;
+        margin-top: 20px; /* Adds some spacing between sections */
+    }
+}
+
+</style>
+<body>
+
+    <header>
+        <h1>Majlis e Ramadan</h1>
+    </header>
+
+    <section class="event-details">
+        <div class="event-container">
+            <img src="assets/images/WhatsApp Image 2025-02-05 at 15.57.39_28c451e5.jpg" alt="Majlis e-Ramadan Event" class="event-image">
+            <div class="event-content">
+                <p>Experience Mangalore’s Biggest Food Festival at Majlis e Ramadan, where culture, tradition, and delicious flavors come together.</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Date: 9 March - 9 April 2025</p>
+                <p><i class="fa-solid fa-location-dot"></i> Location: Keianza Garden, Uchila, Mangalore.</p>
+            <p class="contact-num"> For Inquiries Contact us@: <a href="tel:+91 7019211749">+91 7019211749</a></p>
+             
+            </div>
+        </div>
+    </section>
+      <!-- ======================================== 
+          Our work counter Section Start  
+    ========================================  -->
+    <section class="section section-work-data">
+        <div class="container2 grid grid-two-column">
+            <div>
+                <h2 class="counter-numbers" data-number="200">0+</h2>
+                <p>Stalls</p>
+            </div>
+            <div>
+                <h2 class="counter-numbers" data-number="1">1M</h2> 
+                <p>Foot Falls</p>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Event Gallery</h2>
+        <div class="gallery-container">
+            <img src="assets/images/img6.jpg" alt="Gallery Image 6">
+            <img src="assets/images/img1.jpg" alt="Gallery Image 1">
+            <img src="assets/images/img2.jpg" alt="Gallery Image 2">
+            <img src="assets/images/img3.jpg" alt="Gallery Image 3">
+            <img src="assets/images/img4.jpg" alt="Gallery Image 4">
+            <img src="assets/images/img5.jpg" alt="Gallery Image 5">
+           
+        </div>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+
+        
+    </section>
+
+   
+    
+    
+    <script>
+        // counting number script
+    const workSection = document.querySelector(".section-work-data");
+    const workObserver = new IntersectionObserver(
+        (entries, observer) => {
+            const [entry] = entries;
+
+            if (!entry.isIntersecting) return;
+
+            const counterNums = document.querySelectorAll(".counter-numbers");
+            const speed = 200;
+
+            counterNums.forEach((curElem) => {
+                const targetNumber = parseInt(curElem.dataset.number);
+                const updateNumber = () => {
+                    const initialNum = parseInt(curElem.innerText);
+                    const incrementNumber = Math.ceil(targetNumber / speed);
+
+                    if (initialNum < targetNumber) {
+                        if (curElem.dataset.number === "2005") {
+                            curElem.innerText = Math.min(initialNum + incrementNumber, targetNumber);
+                        } else {
+                            curElem.innerText = `${initialNum + incrementNumber}+`;
+                        }
+                        if (initialNum + incrementNumber < targetNumber) {
+                            setTimeout(updateNumber, 10);
+                        }
+                    }
+                };
+
+                updateNumber();
+            });
+
+            observer.unobserve(workSection);
+        }, {
+            root: null,
+            threshold: 0,
+        }
+    );
+
+    workObserver.observe(workSection);
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+<title> Desert Rose </title>
+    <!-- <title>Desert Rose</title> -->
+</head>
+<style>
+    :root{
+        --first:#040823;
+        --second:#e2bd55;
+
+    }
+    body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow-x: hidden;
+    background-color: rgba(0, 0, 0, 0.6); 
+}
+
+.main {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("assets/images/WhatsApp%20Image%202025-02-10%20at%2011.22.25_b6981032.jpg");
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: darken; /* Darkens the image */
+    z-index: -1;
+}
+
+
+
+@keyframes zoomInOut {
+    0% {
+        transform: scale(1); /* Normal size */
+    }
+    100% {
+        transform: scale(1.1); /* Zoomed in */
+    }
+}
+
+/* =============EXTRA SPACE REMOVER============ */
+/* For mobile screens */
+@media only screen and (max-width: 767px) {
+    /* Adjust padding for the hero page */
+    .hero-page {
+        padding: 30px 0;
+    }
+
+    /* Adjust margin top and bottom for the introduction section */
+    .introduction-section {
+        padding: 30px 10px;
+        /* margin-top: 50px; */
+        margin-bottom: 50px;
+    }
+
+    /* Adjust margin bottom for the gallery container */
+    .container {
+        margin-bottom: 20px;
+    }
+}
+
+
+
+/* Hero page styles */
+.hero-page {
+    /* background-color: rgba(240, 240, 240, 0.8); Light color with opacity */
+    /* background-size: cover; */
+    text-align: center;
+    /* padding: 100px 0; */
+    min-height: 80vh; /* Set min-height to cover entire viewport height */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed; /* Set position to fixed */
+    top: 0; /* Stick to the top */
+    left: 0; /* Stick to the left */
+    width: 100%; /* Occupy full width */
+    z-index: 1; /* Ensure it's below other content */
+    overflow: hidden; /* Remove scrollbar */
+    /* Relative positioning for absolute elements */
+    position: relative; 
+    margin-bottom: 200px;
+}
+
+/* Logo inside hero section */
+.hero-logo {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    /* transform: translate(-50%, -50%); Center the logo */
+}
+
+/* Logo styles */
+.logo {
+    position: absolute;
+    top: 40px;
+    left: 60px;
+    /* animation: fadeIn 2s ease-in; */
+    mix-blend-mode: lighten;
+}
+.logo-img {
+    height: 200px;
+    width: 200px;
+}
+
+/* Hero content styles */
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+    /* margin-top: 100px; */
+}
+
+/* .title {
+    font-size: 46px;
+    margin-bottom: 20px;
+} */
+
+.subtitle  {
+    font-size: 18px;
+margin-top: 0;
+    color: #e2bd55; /* Set text color to white */
+
+}
+.subtitle1 {
+    color:#fff;
+    font-size: 32px;
+    top: 0;
+    letter-spacing: 14px;
+    text-align: center;
+    margin-top: -20px; /* Adjust this value as needed */
+}
+/* .subtitle2 {
+    color: #fff;
+    font-size: 32px;
+    top: 0;
+    letter-spacing: 10px;
+    text-align: center;
+    margin-top: -20px; /* Adjust this value as needed 
+} */
+
+/* Media query for mobile screens */
+@media only screen and (max-width: 767px) {
+   
+    
+.nav-links ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    position: relative; /* Add relative positioning to the link */
+}
+/* .subtitle1{
+    color: #fff;
+    font-size: 16px;
+    top: 0;
+    letter-spacing: 15px;
+    text-align: center;
+    
+} */
+.logo {
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    /* animation: fadeIn 2s ease-in; */
+    mix-blend-mode: lighten;
+}
+.social-icons button{
+    font-size: 20px;
+}
+
+}
+@media only screen and (max-width: 375px) {
+    /* Styles specifically for iPhone screens */
+    .social-icons button{
+        font-size: 20px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    /* Styles for screens up to 767px wide (typically mobile devices) */
+    .subtitle1 {
+        color: #e2bd55;
+        font-size: 12px;
+        top: 0;
+        letter-spacing: 15px;
+        text-align: center;
+        margin-top: -18px; /* Adjust this value as needed */
+    }
+    .subtitle2{
+        color: #e2bd55;
+        font-size: 12px;
+        top: 0;
+        letter-spacing: 10px;
+        text-align: center;
+        margin-top: -18px; /* Adjust this value as needed */
+    }
+}
+
+
+/* ============================waves */
+.waves-demo {
+    /* height: 100vh; */
+    font-size: 80px;
+    font-weight: bold;
+    transition: all 200ms;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: 50% 50%;
+    display: grid;
+    place-items: center;
+    z-index: 1;
+    cursor: pointer;
+    position: relative;
+    /* padding: 20px; */
+    overflow: hidden; /* Add this line to remove scrollbar */
+    background: transparent; /* Combine background properties */
+    max-height: 100vh; /* Limit height to viewport height */
+    margin-bottom: 0;
+    margin-top: 190px;
+}
+
+/* Waves */
+.waves {
+    color: transparent;
+    -webkit-text-stroke: 1px #e2bd55;
+    position: relative;
+}
+
+.waves:after {
+    content: attr(data-word);
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: #e2bd55;
+    animation: waves 2s ease-in-out infinite forwards;
+}
+
+@keyframes waves {
+    0%, 100% {
+        clip-path: polygon(0 66%, 11% 59%, 18% 51%, 26% 46%, 35% 41%, 48% 44%, 55% 54%, 63% 63%, 76% 60%, 82% 50%, 92% 48%, 100% 53%, 100% 100%, 0% 100%);
+    }
+    50% {
+        clip-path: polygon(0 66%, 8% 74%, 17% 77%, 28% 70%, 35% 57%, 48% 44%, 56% 39%, 69% 41%, 75% 47%, 84% 60%, 92% 61%, 100% 53%, 100% 100%, 0% 100%);
+    }
+}
+.waves-demo {
+    font-size: 90px; /* Adjust font size for mobile screens */
+    padding: 10px; /* Adjust padding for mobile screens */
+}
+
+@media (max-width: 768px) {
+    .waves-demo {
+        font-size: 40px; /* Adjust font size for smaller screens */
+        /* padding: 5px; Adjust padding for smaller screens */
+        margin-top: -35px;
+    }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    .waves-demo {
+        font-size: 70px; /* Adjust font size for medium screens */
+        /* padding: 10px; Adjust padding for medium screens */
+    }
+}
+@media only screen and (max-width: 767px) {
+    .logo-img {
+        height: 80px; /* Smaller size for mobile */
+        width: 80px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .hero-content {
+        max-width: 90%;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .subtitle {
+        font-size: 12px; /* Reduce font size */
+    }
+
+    .subtitle1 {
+        font-size: 12px; /* Reduce font size */
+        letter-spacing: 4px; /* Adjust letter spacing */
+        margin-top: -10px; /* Adjust spacing */
+        color: white;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        padding: 0;
+        margin: 10px 0;
+    }
+
+    .nav-links ul li {
+        margin: 5px 0;
+    }
+
+    .nav-links ul li a {
+        font-size: 18px; /* Reduce nav font size */
+    }
+
+    .book-now-btn {
+        width: 120px;
+        font-size: 14px;
+        height: 40px;
+    }
+
+    .logo-img {
+        height: 80px; /* Reduce logo size */
+    }
+
+    .social-icons button {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .subtitle {
+        font-size: 10px;
+    }
+
+    .subtitle1 {
+        font-size: 10px;
+        /* letter-spacing: px; */
+    }
+
+    .book-now-btn {
+        width: 100px;
+        font-size: 12px;
+        height: 35px;
+    }
+
+    .social-icons button {
+        font-size: 16px;
+    }
+}
+
+
+.blog-section {
+    text-align: center;
+    padding: 50px 20px;
+    /* background:#040823; */
+}
+
+.blog-heading {
+    font-size: 32px;
+    font-weight: bold;
+    color:white;
+    margin-bottom: 20px;
+}
+
+.blog-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.blog-card {
+    background: #f8b400;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.blog-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.blog-card h3 {
+    font-size: 20px;
+    color:  #040823;
+    margin: 15px;
+}
+
+.blog-card p {
+    font-size: 14px;
+    color:#040823;
+    margin: 0 15px;
+}
+
+.read-more {
+    display: block; /* Makes it take full width */
+    width: fit-content; /* Only takes the necessary width */
+    margin: 15px auto; /* Centers it horizontally */
+    padding: 10px 20px; /* Proper padding */
+    color: #040823; /* Button text color */
+    font-weight: bold;
+    text-decoration: none;
+    border: 2px solid #040823;
+    border-radius: 5px; /* Adds rounded corners */
+    transition: 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.read-more:hover {
+    background: #040823; /* Changes background on hover */
+    color: white; /* Changes text color on hover */
+    text-decoration: none; /* Prevents underline */
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    
+.blog-section{
+    margin-top: -200px;
+}
+    .blog-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .blog-card {
+        width: 90%;
+    }
+}
+
+@media (min-width: 1024px) { /* Adjust for large screens */
+    .blog-card {
+        width: 400px; /* Increase width */
+        height: 350px; /* Increase height */
+    }
+
+    .blog-card img {
+        height: 220px; /* Increase image height */
+    }
+
+    .blog-card h3 {
+        font-size: 22px; /* Slightly larger text */
+    }
+
+    .blog-card p {
+        font-size: 16px;
+    }
+}
+
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+}
+
+.social-links a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.social-links i {
+    font-size: 20px;
+    color: #e2bd55;
+}
+
+.contact-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background: #e2bd55;
+    color: #040823;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: 0.3s ease-in-out;
+}
+
+.contact-btn:hover {
+    background: #d1a347;
+}
+.social-links {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row; /* Change to row */
+    gap: 15px; /* Adjust spacing between icons */
+    justify-content: center;
+    align-items: center;
+}
+.description {
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    max-width: 800px;
+    line-height: 1.6;
+}
+.hero-content {
+    text-align: center;
+}
+.contact-section {
+            max-width: 600px;
+            margin: 30px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            color: #040823;
+        }
+
+        .contact-section h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: var(--first);
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input,
+        .contact-form select,
+        .contact-form textarea {
+            width: 90%;
+            padding: 10px;
+            border: 2px solid var(--first);
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+            resize: none;
+        }
+
+        .contact-form button {
+            background: var(--second);
+            color: var(--first);
+            border: none;
+            padding: 12px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+            width: 90%;
+            margin: 0 auto;
+            display: block;
+        }
+
+        .contact-form button:hover {
+            background: #d1a347;
+        }
+
+        /* Responsive for Mobile */
+        @media (max-width: 768px) {
+            .contact-section {
+                width: 90%;
+            }
+        }
+
+        .footer {
+    background: #040823;
+    color: white;
+    padding: 30px 20px;
+}
+
+.footer-container {
+    max-width: 1000px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+}
+
+/* About Us Section (Left Side) */
+.footer-about {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-about h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.footer-about p {
+    font-size: 14px;
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* Contact Details (Right Side) */
+.footer-contact {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-contact h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+.footer-contact p {
+    font-size: 14px;
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-contact a:hover {
+    color: #f39c12;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-about, .footer-contact {
+        text-align: center;
+    }
+    
+}
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        align-items: center; /* Ensures all content is centered */
+    }
+
+    .footer-about, 
+    .footer-contact {
+        text-align: center;
+        width: 100%; /* Ensures it takes full width for centering */
+    }
+
+    .footer-contact {
+        margin-top: 20px; /* Adds spacing between sections */
+    }
+}
+
+.footer-designed {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #fff; /* Adjust color as needed */
+}
+
+.footer-designed a {
+    color: #ffcc00; /* Adjust link color */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-designed a:hover {
+    text-decoration: underline;
+}
+
+</style>
+<body>
+      <!-- Preloader HTML -->
+      <!-- <div id="loader"></div> -->
+    <main  >
+        <section class="main">
+            <img src="" alt="">
+        </section>
+        
+        <div class="hero-page">
+            <div class="logo">
+                <img src="assets/images/Desert_Roselogo-removebg-preview.png" alt="Logo" class="logo-img">
+            </div>
+            
+            <div class="hero-content">
+                <section class="waves-demo">
+                    <div class="waves" data-word="DESERT ROSE">
+                        DESERT ROSE
+                    </div>
+                </section>
+            
+                <p class="subtitle1">Events | Expo | Entertainment</p>
+            
+                <!-- Description about Desert Rose -->
+                <p class="description">
+                    Desert Rose is a leading events, expo, and entertainment company, delivering world-class experiences globally. With branches in Bangalore, the Gulf, and Southeast Asia, we specialize in organizing high-profile exhibitions, concerts, and corporate events that bring creativity and innovation to life.
+                </p>
+                
+            
+                <!-- Social Links -->
+                <div class="social-links">
+                    <!-- Instagram Icon -->
+                    <a href="https://www.instagram.com/desertroseexpo?igsh=OHdxank5Y2FkYzQz" target="_blank">
+                        <i class="fab fa-instagram"></i> 
+                    </a>
+                    <a href="https://wa.me/917019211749" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    
+            
+                    <!-- Email -->
+                    <a href="mailto:desertroseexpo@gmail.com">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            
+                <!-- Contact Button -->
+                <a href="contact.html" class="contact-btn">Contact Us</a>
+            </div>
+            
+        
+        </main>
+        <!-- !-- Blog Section  -->
+    <section class="blog-section">
+        <h2 class="blog-heading">Latest Event</h2>
+        <div class="blog-container">
+            <!-- Blog 1 -->
+            <div class="blog-card">
+                <img src="assets/images/WhatsApp Image 2025-02-05 at 15.57.39_28c451e5.jpg" alt="Blog Image 1">
+                <h3>Majlis e -Ramadan</h3>
+                <p>Mangalore's Biggest Food Festival</p>
+
+                <a href="index2.html" class="read-more">Explore Now</a>
+            </div>
+            </div>
+            </section>
+    
+        </div>
+    </section>
+    <section class="contact-section">
+        <h2 style="text-align: center;">Connect Us</h2>
+        <form class="contact-form" onsubmit="sendWhatsAppMessage(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number" required>
+            <select id="category" required>
+                <option value="" disabled selected>Select an option</option>
+                <option value="Book a Stall">Book a Stall</option>
+                <option value="General Inquiry">General Inquiry</option>
+            </select>
+            <textarea id="message" placeholder="Enter your message..." required></textarea>
+            <button type="submit">Inquire</button>
+        </form>
+    </section>
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Left Side: About Us -->
+            <div class="footer-about">
+                <h3>About Us</h3>
+                <p>
+                    Desert Rose is a leading events, expo, and entertainment company, delivering world-class experiences globally. With branches in Bangalore, the Gulf, and Southeast Asia, we specialize in organizing high-profile exhibitions, concerts, and corporate events.
+                </p>
+            </div>
+    
+            <!-- Right Side: Contact Details -->
+            <div class="footer-contact">
+                <h3>Contact Us</h3>
+                <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+917019211749">+91 7019211749</a></p>
+                <p><i class="fas fa-phone"></i> <a href="tel:+919632781673">+91 9632781673</a></p>
+                <p><i class="fas fa-envelope"></i> <a href="mailto:desertroseexpo@gmail.com">desertroseexpo@gmail.com</a></p>
+            </div>
+        </div>
+    
+       <!-- Designed by section -->
+<div class="footer-designed" style="text-align: center; margin-top: 20px; font-size: 14px; color: white;">
+    <p>Designed by <a href="https://geekbudsdesigns.com" target="_blank" style="color: #e2bd55; text-decoration: none; font-weight: bold; font-size: 12px;">Geek Buds Design</a></p>
+</div>
+
+    </footer>
+    
+
+    
+   
+    <script>
+        function sendWhatsAppMessage(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            // Get input values
+            let name = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let phone = document.getElementById("phone").value;
+            let category = document.getElementById("category").value;
+            let message = document.getElementById("message").value;
+
+            // WhatsApp number (without + sign)
+            let whatsappNumber = "917019211749";
+
+            // Properly formatted prefilled WhatsApp message
+            let whatsappMessage = `Hello, I am ${name}. \nEmail: ${email}\nPhone: ${phone}\nCategory: ${category}\n\nMessage:\n${message}`;
+
+            // Encode the message for URL
+            let encodedMessage = encodeURIComponent(whatsappMessage);
+
+            // Open WhatsApp link
+            let whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+            window.open(whatsappURL, "_blank");
+        }
+    document.addEventListener("DOMContentLoaded", function () {
+        ScrollReveal().reveal('.subtitle, .subtitle1, .subtitle2', {
+            duration: 1500,
+            origin: 'bottom',
+            distance: '30px',
+            delay: 300,
+            easing: 'ease-in-out',
+            reset: false
+        });
+
+        ScrollReveal().reveal('.hero-content', {
+            duration: 1800,
+            origin: 'bottom',
+            distance: '40px',
+            delay: 500,
+            easing: 'ease-in-out',
+            reset: false
+        });
+
+        ScrollReveal().reveal('.social-icons button', {
+            duration: 2000,
+            origin: 'bottom',
+            distance: '50px',
+            delay: 700,
+            easing: 'ease-in-out',
+            reset: false
+        });
+    });
+
+
+    </script>
+
+
+    
+    </main>
+</body>
