@@ -574,113 +574,47 @@ margin-top: 0;
             }
         }
 
-        .footer {
+/* ====================== */
+.footer {
     background: #040823;
-    color: white;
-    padding: 30px 20px;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
 
 .footer-container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
 }
 
-/* About Us Section (Left Side) */
-.footer-about {
-    flex: 1;
-    text-align: left;
+.contact-info {
+    margin-top: 10px;
 }
 
-.footer-about h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f39c12;
-}
-
-.footer-about p {
-    font-size: 14px;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-/* Contact Details (Right Side) */
-.footer-contact {
-    flex: 1;
-    text-align: left;
-}
-
-.footer-contact h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f39c12;
-}
-
-.footer-contact p {
-    font-size: 14px;
+.contact-info p,
+.contact-info a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
     margin: 5px 0;
 }
 
-.footer-contact a {
-    color: white;
+.contact-info a:hover {
+    color: #e2bd55;
+}
+
+i {
+    margin-right: 8px;
+}
+.designed-by{
+    font-size: 10px;
+    color: grey;
+}
+.designed-by a{
+    font-size: 10px;
+    color: grey;
     text-decoration: none;
-    transition: color 0.3s;
 }
-
-.footer-contact a:hover {
-    color: #f39c12;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-about, .footer-contact {
-        text-align: center;
-    }
-    
-}
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-        align-items: center; /* Ensures all content is centered */
-    }
-
-    .footer-about, 
-    .footer-contact {
-        text-align: center;
-        width: 100%; /* Ensures it takes full width for centering */
-    }
-
-    .footer-contact {
-        margin-top: 20px; /* Adds spacing between sections */
-    }
-}
-
-.footer-designed {
-    text-align: center;
-    margin-top: 20px;
-    font-size: 14px;
-    color: #fff; /* Adjust color as needed */
-}
-
-.footer-designed a {
-    color: #ffcc00; /* Adjust link color */
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.footer-designed a:hover {
-    text-decoration: underline;
-}
-
 </style>
 <body>
       <!-- Preloader HTML -->
@@ -765,34 +699,38 @@ margin-top: 0;
             <button type="submit">Inquire</button>
         </form>
     </section>
+
+    
+
     <footer class="footer">
         <div class="footer-container">
-            <!-- Left Side: About Us -->
-            <div class="footer-about">
-                <h3>About Us</h3>
-                <p>
-                    Desert Rose is a leading events, expo, and entertainment company, delivering world-class experiences globally. With branches in Bangalore, the Gulf, and Southeast Asia, we specialize in organizing high-profile exhibitions, concerts, and corporate events.
-                </p>
-            </div>
+         
     
-            <!-- Right Side: Contact Details -->
-            <div class="footer-contact">
-                <h3>Contact Us</h3>
-                <p><i class="fas fa-map-marker-alt"></i> Bangalore, India</p>
-                <p><i class="fas fa-phone"></i> <a href="tel:+917019211749">+91 7019211749</a></p>
-                <p><i class="fas fa-phone"></i> <a href="tel:+919632781673">+91 9632781673</a></p>
-                <p><i class="fas fa-envelope"></i> <a href="mailto:desertroseexpo@gmail.com">desertroseexpo@gmail.com</a></p>
-            </div>
-        </div>
-    
-       <!-- Designed by section -->
-<div class="footer-designed" style="text-align: center; margin-top: 20px; font-size: 14px; color: white;">
-    <p>Designed by <a href="https://geekbudsdesigns.com" target="_blank" style="color: #e2bd55; text-decoration: none; font-weight: bold; font-size: 12px;">Geek Buds Design</a></p>
-</div>
+            <div class="contact-info">
+                <p>Contact Us:</p>
+                <a href="mailto:desertroseexpo@gmail.com">
 
+                    <i class="fas fa-envelope"></i> desertroseexpo@gmail.com
+                </a>
+                <a href="https://wa.me/917019211749" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +91 7019211749
+                </a>
+                <a href="https://www.instagram.com/desertroseexpo?igsh=OHdxank5Y2FkYzQz" target="_blank">
+
+                    <i class="fab fa-instagram"></i> desertroseexpo
+                </a>
+                <a href="tel:+917019211749">
+                    <i class="fas fa-phone"></i> +91 7019211749
+                </a>  
+                <a href="tel:+919632781673">
+                +91 9632781673
+                </a>
+            </div>
+               <p class="copyright">Copyright © 2025 Desert Rose Expo - All Rights Reserved.</p>
+               <p class="designed-by">Designed by <a href="https://geekbudsdesigns.com" target="_blank">Geek Buds Designs</a></p>
+            </div>
+       
     </footer>
-    
-
     
    
     <script>
