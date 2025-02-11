@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desert Rose </title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<style>
+    :root {
+        --first: #040823;
+        --second: #e2bd55;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 0;
+        padding: 0;
+        background-color: var(--first);
+        color: white;
+    }
+
+    header {
+        background-color: var(--first);
+        padding: 15px;
+        color: var(--second);
+        font-size: 24px;
+    }
+
+    .event-details {
+        max-width: 900px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .event-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .event-image {
+        width: 50%;
+        border-radius: 10px;
+    }
+
+    .event-content {
+        width: 50%;
+        text-align: left;
+    }
+
+    .gallery {
+        max-width: 900px;
+        margin: 40px auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .gallery h2 {
+        font-size: 24px;
+        color: var(--second);
+        margin-bottom: 20px;
+    }
+
+    .gallery-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 10px;
+    }
+
+    .gallery-container img, 
+    .gallery-container video {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s ease;
+    }
+
+    .gallery-container img:hover, 
+    .gallery-container video:hover {
+        transform: scale(1.05);
+    }
+
+    /* Responsive for small screens */
+    @media (max-width: 768px) {
+        .gallery-container {
+            grid-template-columns: repeat(2, 1fr);
+        }
+    }
+</style>
+<body>
+
+    <header>
+        <h1>Majlis e Ramadan</h1>
+    </header>
+
+    <section class="event-details">
+        <div class="event-container">
+            <img src="assets/images/WhatsApp Image 2025-02-05.jpg" alt="Majlis e-Ramadan Event" class="event-image">
+            <div class="event-content">
+                <p>Experience Mangalore’s Biggest Food Festival at Majlis e Ramadan, where culture, tradition, and delicious flavors come together.</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Date: 9 March - 9 April 2025</p>
+                <p><i class="fa-solid fa-location-dot"></i> Location: Keianza Garden, Uchila, Mangalore.</p>
+                <p class="contact-num"> For Inquiries Contact us@: <a href="tel:+91 7019211749">+91 7019211749</a></p>
+            </div>
+        </div>
+    </section>
+
+    <section class="gallery">
+        <h2>Event Gallery</h2>
+        <div class="gallery-container">
+            <img src="assets/images/img6.jpg" alt="Gallery Image 6">
+            <img src="assets/images/img1.jpg" alt="Gallery Image 1">
+            <img src="assets/images/img2.jpg" alt="Gallery Image 2">
+            <img src="assets/images/img3.jpg" alt="Gallery Image 3">
+            <img src="assets/images/img4.jpg" alt="Gallery Image 4">
+            <img src="assets/images/img5.jpg" alt="Gallery Image 5">
+
+            <!-- Adding Videos -->
+            <video controls>
+                <source src="assets/images/kieanzavdeo.mp4" type="video/mp4">
+        
+            </video>
+
+            <video controls>
+                <source src="assets/videos/video2.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <a href="index.html" class="back-btn">← Back to Home</a>
+    </section>
+
+</body>
+</html>
