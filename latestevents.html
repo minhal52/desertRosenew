@@ -193,95 +193,60 @@ text-decoration: none;
 color:#e2bd55;
 }
 
-
+/* ====================== */
 .footer {
-    background: #040823;
-    color: white;
-    padding: 30px 20px;
+    background: #040717;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
 }
 
 .footer-container {
-    max-width: 1000px;
+    max-width: 800px;
     margin: auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 40px;
 }
 
-/* About Us Section (Left Side) */
-.footer-about {
-    flex: 1;
-    text-align: left;
+.contact-info {
+    margin-top: 10px;
 }
 
-.footer-about h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f39c12;
-}
-
-.footer-about p {
-    font-size: 14px;
-    color: #ddd;
-    line-height: 1.6;
-}
-
-/* Contact Details (Right Side) */
-.footer-contact {
-    flex: 1;
-    text-align: left;
-}
-
-.footer-contact h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #f39c12;
-}
-
-.footer-contact p {
-    font-size: 14px;
+.contact-info p,
+.contact-info a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
     margin: 5px 0;
 }
 
-.footer-contact a {
-    color: white;
+.contact-info a:hover {
+    color: #e2bd55;
+}
+
+.business-info {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.business-info p {
+    margin: 5px 0;
+    color: #ccc;
+}
+
+i {
+    margin-right: 8px;
+}
+
+.designed-by {
+    font-size: 10px;
+    color: grey;
+}
+
+.designed-by a {
+    font-size: 10px;
+    color: grey;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
-.footer-contact a:hover {
-    color: #f39c12;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-about, .footer-contact {
-        text-align: center;
-    }
-    
-}
-/* Responsive Design */
-@media (max-width: 768px) {
-    .footer-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .footer-about {
-        text-align: center;
-    }
-
-    .footer-contact {
-        text-align: center;
-        margin-top: 20px; /* Adds some spacing between sections */
-    }
-}
 .gallery-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -327,9 +292,9 @@ color:#e2bd55;
             <img src="assets/images/WhatsApp Image 2025-02-05 at 15.57.39_28c451e5.jpg" alt="Majlis e-Ramadan Event" class="event-image">
             <div class="event-content">
                 <p>Experience Mangalore’s Biggest Food Festival at Majlis e Ramadan, where culture, tradition, and delicious flavors come together.</p>
-                <p><i class="fa-solid fa-calendar-days"></i> Date: 9 March - 9 April 2025</p>
+                <p><i class="fa-solid fa-calendar-days"></i> Date: 20 March - 9 April 2025</p>
                 <p><i class="fa-solid fa-location-dot"></i> Location: Keianza Garden, Uchila, Mangalore.</p>
-            <p class="contact-num"> For Inquiries Contact us@: <a href="tel:+91 7019211749">+91 7019211749</a></p>
+            <p class="contact-num"> For Inquiries Contact us @: <a href="tel:+91 7019211749">+91 7019211749</a></p>
              
             </div>
         </div>
@@ -366,6 +331,13 @@ color:#e2bd55;
             <img src="assets/images/img4.jpg" alt="Gallery Image 4">
             <img src="assets/images/img5.jpg" alt="Gallery Image 5">
             <img src="assets/images/majliseramdan2.jpg" alt="Gallery Image 2">
+            <!-- <video controls>
+                <source src="assets/images/kieanzavdeo.mp4" type="video/mp4">
+        
+            </video>  <video controls>
+                <source src="assets/images/kieanzavdeo.mp4" type="video/mp4">
+        
+            </video> -->
         </div>
         <a href="index.html" class="back-btn">← Back to Home</a>
 
@@ -373,6 +345,36 @@ color:#e2bd55;
     </section>
 
    
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="contact-info">
+                <p>Contact Us:</p>
+                <a href="mailto:desertroseexpo@gmail.com">
+                    <i class="fas fa-envelope"></i> desertroseexpo@gmail.com
+                </a>
+                <a href="https://wa.me/917019211749" target="_blank">
+                    <i class="fab fa-whatsapp"></i> +91 7019211749
+                </a>
+                <a href="https://www.instagram.com/desertroseexpo?igsh=OHdxank5Y2FkYzQz" target="_blank">
+                    <i class="fab fa-instagram"></i> desertroseexpo
+                </a>
+                <a href="tel:+917019211749">
+                    <i class="fas fa-phone"></i> +91 7019211749
+                </a>
+                <a href="tel:+919632781673">
+                    +91 9632781673
+                </a>
+            </div>
+    
+            <div class="business-info">
+                <p><strong>GST Number:</strong>29AZEPS5402P1ZR</p>
+                <p><strong>Udyam Registration Number: </strong> UDYAM-KR-03-0507864</p>
+            </div>
+    
+            <p class="copyright">Copyright © 2025 Desert Rose Expo - All Rights Reserved.</p>
+            <p class="designed-by">Designed by <a href="https://geekbudsdesigns.com" target="_blank">Geek Buds Designs</a></p>
+        </div>
+    </footer>
     
     
     <script>
